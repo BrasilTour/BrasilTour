@@ -1,16 +1,29 @@
-## Hi there 👋
+# Projeto BrasilTour: Facilitando suas Viagens Pelo Brasil
 
-<!--
-**BrasilTour/BrasilTour** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+## Integrantes
+- **[Ana Luiza Lelis]** - Matrícula: [12301981]
+- **[Isabela Valeska]** - Matrícula: [12301787]
+- **[Guilherme Miura]** - Matrícula: [12400106]
+- **[Leonardo Gomes]** - Matrícula: [12400335]
 
-Here are some ideas to get you started:
+## Turma
+[3C1]
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+---
+
+### Checklist das Funcionalidades (Segunda Entrega)
+
+- [ ] Cadastro de Usuário
+- [ ] Cadastro de Destinos
+- [ ] Cadastro de Atividades
+- [ ] Criação de Roteiros
+- [ ] Consulta de Destinos e Roteiros
+- [ ] Sistema de Avaliações
+- [ ] Cadastro de Promoções
+- [ ] Visualização das Atividades nos Roteiros
+- [ ] Gerenciamento de Roteiros por Usuário
+- [ ] Garantia da Integridade dos Dados
+
+---
+
+**Observação:** Marque as caixas com um `x` para indicar as funcionalidades concluídas. Exemplo: `- [x] Funcionalidade Concluída`
