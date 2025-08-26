@@ -13,7 +13,7 @@
 
 ### Checklist das Funcionalidades (Segunda Entrega)
 
-- [ ] Cadastro de Usuário
+- [x] Cadastro de Usuário
 - [ ] Cadastro de Destinos
 - [ ] Cadastro de Atividades
 - [ ] Criação de Roteiros
