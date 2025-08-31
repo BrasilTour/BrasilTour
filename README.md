@@ -15,18 +15,18 @@ O projeto Brasil Tour é um sistema para criação e gerenciamento de pacotes de
 ## Estrutura de Diretórios
 brasil-tour/
 ├── public/                 # Arquivos da interface (HTML, CSS, JS)<br>
-│   ├── css/
-│   │   └── style.css
-│   ├── js/
-│   │   └── main.js
-│   └── index.html
-├── src/                    # Código-fonte backend (PHP, C#, etc.)
-│   ├── controllers/
-│   ├── models/
-│   └── views/
-├── database/               # Arquivos de banco de dados e scripts
-│   └── schema.sql
-├── README.md               # Arquivo de descrição do projeto
+│   ├── css/<br>
+│   │   └── style.css  <br>
+│   ├── js/  <br>
+│   │   └── main.js   <br>
+│   └── index.html   <br>
+├── src/                    # Código-fonte backend (PHP, C#, etc.)   <br>
+│   ├── controllers/    <br>
+│   ├── models/    <br>
+│   └── views/    <br>
+├── database/               # Arquivos de banco de dados e scripts   <br>
+│   └── schema.sql    <br>
+├── README.md               # Arquivo de descrição do projeto    <br>
 └── .gitignore              # Arquivos a serem ignorados pelo Git
 
 ## 10 Funcionalidades Implementadas
