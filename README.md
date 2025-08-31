@@ -14,7 +14,7 @@ O projeto Brasil Tour é um sistema para criação e gerenciamento de pacotes de
 
 ## Estrutura de Diretórios
 brasil-tour/
-├── public/                 # Arquivos da interface (HTML, CSS, JS)
+├── public/                 # Arquivos da interface (HTML, CSS, JS)<br>
 │   ├── css/
 │   │   └── style.css
 │   ├── js/
