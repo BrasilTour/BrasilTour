@@ -4,10 +4,13 @@
 O projeto Brasil Tour é um sistema para criação e gerenciamento de pacotes de viagem personalizados pelo Brasil. Com ele, os usuários podem montar seu próprio "roteiro mágico", escolhendo destinos e preferências. O sistema armazena as escolhas dos usuários em um banco de dados para gerar roteiros prontos e, futuramente, utilizar inteligência artificial para otimizar as sugestões.
 
 ## Integrantes
--[Ana Luiza Lelis] - Matrícula: [12301981]
--[Isabela Valeska] - Matrícula: [12301787]
--[Guilherme Miura] - Matrícula: [12400106]
--[Leonardo Gomes] - Matrícula: [12400335]
+- **[Ana Luiza Lelis]** - Matrícula: [12301981]
+- **[Isabela Valeska]** - Matrícula: [12301787]
+- **[Guilherme Miura]** - Matrícula: [12400106]
+- **[Leonardo Gomes]** - Matrícula: [12400335]
+
+## Turma
+[3C1]
 
 ## Estrutura de Diretórios
 brasil-tour/
