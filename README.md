@@ -42,9 +42,9 @@ brasil-tour/
 ## Como Executar o Projeto
 
 ### 1. Pré-requisitos
-- **Linguagem:** PHP (ou C#)
-- **Servidor Web:** XAMPP, WAMP ou similar com suporte a Apache e MySQL/MariaDB.
-- **Banco de Dados:** MySQL ou MariaDB.
+- **Linguagem:** PHP
+- **Servidor Web:** WAMP 
+- **Banco de Dados:** MySQL 
 
 ### 2. Instalação
 ```bash
