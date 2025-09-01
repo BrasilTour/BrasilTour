@@ -1,0 +1,167 @@
+/* Importação de fonte do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* Estilos Globais */
+:root {
+    --cor-principal: #007bff;
+    --cor-secundaria: #6c757d;
+    --cor-fundo: #f8f9fa;
+    --cor-texto: #343a40;
+    --cor-clara: #ffffff;
+    --sombra-leve: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    line-height: 1.6;
+}
+
+/* Layout Geral com Flexbox e Grid */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    background-color: var(--cor-principal);
+    color: var(--cor-clara);
+    padding: 1.5rem 20px;
+    display: flex; /* Flexbox para alinhar itens na barra de navegação */
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: var(--sombra-leve);
+}
+
+header h1 {
+    margin: 0;
+    font-weight: 600;
+}
+
+nav a {
+    color: var(--cor-clara);
+    text-decoration: none;
+    margin-left: 20px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #cce5ff;
+}
+
+main {
+    padding: 40px 0;
+}
+
+/* Seções e Cards com CSS Grid e Flexbox */
+.grid-container {
+    display: grid;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+/* Layout para cards de roteiro */
+.grid-roteiros {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.grid-item, .grid-card, .login-container {
+    background-color: var(--cor-clara);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: var(--sombra-leve);
+    transition: transform 0.3s ease;
+}
+
+.grid-item:hover, .grid-card:hover {
+    transform: translateY(-5px);
+}
+
+.grid-card h3 {
+    color: var(--cor-principal);
+    margin-top: 0;
+}
+
+/* Formulários */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+input, select, button {
+    padding: 12px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+button {
+    background-color: var(--cor-principal);
+    color: var(--cor-clara);
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Tabelas para listagem (Admin) */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--cor-clara);
+    box-shadow: var(--sombra-leve);
+    border-radius: 8px;
+    overflow: hidden; /* Garante que a borda arredondada funcione na tabela */
+}
+
+th, td {
+    text-align: left;
+    padding: 12px 15px;
+    border-bottom: 1px solid #dee2e6;
+}
+
+th {
+    background-color: #e9ecef;
+    font-weight: 600;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+a {
+    color: var(--cor-principal);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    border-top: 1px solid #dee2e6;
+    color: var(--cor-secundaria);
+}
