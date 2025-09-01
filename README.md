@@ -52,6 +52,7 @@ Contém todos os arquivos HTML que compõem a parte visual da aplicação. <br>
 <br>
 Contém os scripts SQL para a criação das tabelas e a inserção de dados iniciais.
 <br>
+<br>
 **usuarios.sql:** Estrutura da tabela de usuários.
 <br>
 **roteiro_db.sql:** Estrutura das tabelas para roteiros e detalhes de viagem.
