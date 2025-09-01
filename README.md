@@ -33,7 +33,7 @@ brasil-tour/
 └── .gitignore              # Arquivos a serem ignorados pelo Git
 
 ## 10 Funcionalidades Implementadas
-1.  **Montar Roteiro Mágico:** Formulário para o usuário inserir preferências de viagem.
+1.  **Montar Roteiro:** Formulário para o usuário inserir preferências de viagem.
 2.  **Visualizar Roteiros Prontos:** Exibição de roteiros gerados a partir das escolhas do usuário.
 3.  **Cadastro de Destinos:** Formulário para o administrador cadastrar novos locais.
 4.  **Listagem de Destinos:** Exibição de todos os destinos disponíveis.
