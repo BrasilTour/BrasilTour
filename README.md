@@ -1,4 +1,4 @@
-# Brasil Tour: Descubra o Brasil de forma mágica!
+# Brasil Tour: Facilitando suas Viagens Pelo Brasil!
 
 ## Descrição
 Este repositório contém os arquivos de um projeto de web development focado em formulários de cadastro, login, roteiros de viagem e gerenciamento de banco de dados, seguindo os requisitos do professor. A aplicação foi desenvolvida com HTML puro para a estrutura visual e CSS puro e classes Tailwind para o estilo, garantindo um design limpo e moderno. Os arquivos SQL fornecem a estrutura para as bases de dados de usuários, roteiros e mensagens de contato.
