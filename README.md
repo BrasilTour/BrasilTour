@@ -1,7 +1,10 @@
 # Brasil Tour: Descubra o Brasil de forma mágica!
 
 ## Descrição
-O projeto Brasil Tour é um sistema para criação e gerenciamento de pacotes de viagem personalizados pelo Brasil. Com ele, os usuários podem montar seu próprio "roteiro mágico", escolhendo destinos e preferências. O sistema armazena as escolhas dos usuários em um banco de dados para gerar roteiros prontos e, futuramente, utilizar inteligência artificial para otimizar as sugestões.
+Este repositório contém os arquivos de um projeto de web development focado em formulários de cadastro, login, roteiros de viagem e gerenciamento de banco de dados, seguindo os requisitos do professor. A aplicação foi desenvolvida com HTML puro para a estrutura visual e CSS puro e classes Tailwind para o estilo, garantindo um design limpo e moderno. Os arquivos SQL fornecem a estrutura para as bases de dados de usuários, roteiros e mensagens de contato.
+
+
+
 
 ## Integrantes
 - **[Ana Luiza Lelis]** - Matrícula: [12301981]
@@ -31,17 +34,36 @@ brasil-tour/
 
 ## 10 Funcionalidades Implementadas
 
-1.  **Montar Roteiro Mágico:** Formulário para o usuário inserir preferências de viagem.
-2.  **Visualizar Roteiros Prontos:** Exibição de roteiros gerados a partir das escolhas do usuário.
-3.  **Cadastro de Destinos:** Formulário para o administrador cadastrar novos locais.
-4.  **Listagem de Destinos:** Exibição de todos os destinos disponíveis.
-5.  **Edição de Destinos:** Funcionalidade para o administrador atualizar informações de um destino.
-6.  **Exclusão de Destinos:** Opção para remover um destino do sistema.
-7.  **Login de Administrador:** Autenticação para acesso às funcionalidades de gerenciamento.
-8.  **Listagem de Usuários:** Exibição de todos os usuários cadastrados.
-9.  **Busca de Roteiros:** Ferramenta de pesquisa por roteiros específicos.
-10. **Visualização Detalhada do Roteiro:** Página com informações completas de um roteiro pronto.
+Contém todos os arquivos HTML que compõem a parte visual da aplicação. <br>
 
+cadastro.html: Formulário de cadastro de usuário.<br>
+<br>
+login.html: Formulário de login de usuário.
+<br>
+formulario_destino.html: Formulário para o usuário criar um roteiro de viagem personalizado.
+<br>
+modal_roteiro.html: Tela de resposta que exibe o roteiro gerado.
+<br>
+lista_usuarios.html: Página para listar os usuários cadastrados (conectado ao banco de dados).
+<br>
+contato.html: Formulário para os usuários enviarem mensagens.
+<br>
+lista_destinos.html: Página para listar os destinos disponíveis (conectado ao banco de dados).
+<br>
+<br>
+🗄️ banco_de_dados/
+Contém os scripts SQL para a criação das tabelas e a inserção de dados iniciais.
+<br>
+usuarios.sql: Estrutura da tabela de usuários.
+<br>
+roteiro_db.sql: Estrutura das tabelas para roteiros e detalhes de viagem.
+<br>
+auth_db.sql: Estrutura da tabela de autenticação para login e cadastro.
+<br>
+contato_db.sql: Estrutura da tabela para mensagens de contato.
+<br>
+destinos.sql: Estrutura das tabelas de destinos e atividades.
+<br>
 ## Como Executar o Projeto
 
 ### 1. Pré-requisitos
