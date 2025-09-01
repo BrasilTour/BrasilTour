@@ -17,3 +17,4 @@ O projeto segue o padrão de design **MVC** com a seguinte organização de dire
 -   **`views/`**: Responsável pela apresentação da interface do usuário (HTML e CSS).
 -   **`controllers/`**: Gerencia o fluxo de controle, processando a entrada do usuário e coordenando a interação entre as `Models` e as `Views`.
 -   **`public/`**: Armazena arquivos estáticos, como imagens, CSS e JavaScript.
+
