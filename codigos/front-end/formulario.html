@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monte seu Roteiro Mágico - BrasilTour</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 min-h-screen flex items-center justify-center p-4">
+    <div class="bg-white p-8 md:p-12 rounded-2xl shadow-xl w-full max-w-4xl">
+        <div class="flex items-center mb-8">
+            <svg class="w-8 h-8 text-blue-500 mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"></path>
+            </svg>
+            <h1 class="text-3xl font-bold text-gray-800">Monte seu Roteiro Mágico</h1>
+        </div>
+        <form>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
+                <!-- Cidade de Origem -->
+                <div class="flex flex-col">
+                    <label for="origem" class="text-gray-700 font-semibold mb-2">Sua cidade de origem</label>
+                    <input type="text" id="origem" name="origem" placeholder="Ex: São Paulo, SP" class="px-4 py-3 rounded-lg border-2 border-gray-200 focus:outline-none focus:border-blue-500 transition-colors">
+                </div>
+                <!-- Destino ou tipo de lugar -->
+                <div class="flex flex-col">
+                    <label for="destino" class="text-gray-700 font-semibold mb-2">Destino ou tipo de lugar</label>
+                    <input type="text" id="destino" name="destino" placeholder="Ex: Praias tranquilas no Nordeste" class="px-4 py-3 rounded-lg border-2 border-gray-200 focus:outline-none focus:border-blue-500 transition-colors">
+                </div>
+                <!-- Duração -->
+                <div class="flex flex-col">
+                    <label for="duracao" class="text-gray-700 font-semibold mb-2">Duração (dias)</label>
+                    <input type="number" id="duracao" name="duracao" placeholder="Ex: 5" class="px-4 py-3 rounded-lg border-2 border-gray-200 focus:outline-none focus:border-blue-500 transition-colors">
+                </div>
+                <!-- Orçamento -->
+                <div class="flex flex-col">
+                    <label for="orcamento" class="text-gray-700 font-semibold mb-2">Orçamento</label>
+                    <select id="orcamento" name="orcamento" class="px-4 py-3 rounded-lg border-2 border-gray-200 focus:outline-none focus:border-blue-500 transition-colors bg-white">
+                        <option>Econômico</option>
+                        <option selected>Moderado</option>
+                        <option>Luxuoso</option>
+                    </select>
+                </div>
+                <!-- Nº de viajantes -->
+                <div class="flex flex-col">
+                    <label for="viajantes" class="text-gray-700 font-semibold mb-2">Nº de viajantes</label>
+                    <input type="number" id="viajantes" name="viajantes" placeholder="Ex: 2" class="px-4 py-3 rounded-lg border-2 border-gray-200 focus:outline-none focus:border-blue-500 transition-colors">
+                </div>
+            </div>
+            <!-- Preferências ou pedidos especiais -->
+            <div class="flex flex-col mb-8">
+                <label for="preferencias" class="text-gray-700 font-semibold mb-2">Preferências ou pedidos especiais</label>
+                <textarea id="preferencias" name="preferencias" rows="4" placeholder="Ex: Gostaria de opções vegetarianas, prefiro lugares com pouca gente, etc." class="px-4 py-3 rounded-lg border-2 border-gray-200 focus:outline-none focus:border-blue-500 transition-colors resize-none"></textarea>
+            </div>
+            <!-- Botão de submissão -->
+            <button type="submit" class="w-full text-white font-bold py-4 rounded-lg text-lg focus:outline-none focus:ring-4 focus:ring-blue-300 transition-all shadow-lg
+                bg-gradient-to-r from-blue-500 to-green-500 hover:from-blue-600 hover:to-green-600">
+                Gerar Roteiro Personalizado
+            </button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listagem de Usuários - BrasilTour</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 min-h-screen p-4 sm:p-8">
+    <div class="max-w-4xl mx-auto bg-white rounded-2xl shadow-xl p-6 sm:p-10">
+        <h1 class="text-3xl font-bold text-gray-800 text-center mb-8">Usuários Cadastrados</h1>
+        <div id="loading" class="text-center text-gray-500">Carregando usuários...</div>
+        <div id="user-list" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- User cards will be rendered here -->
+        </div>
+        <div id="error-message" class="text-red-500 text-center mt-4 hidden"></div>
+    </div>
+
+    <!-- Firebase SDKs -->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+        import { getAuth, signInAnonymously, signInWithCustomToken } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
+        import { getFirestore, collection, onSnapshot } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
+
+        // Global variables provided by the environment
+        const appId = typeof __app_id !== 'undefined' ? __app_id : 'default-app-id';
+        const firebaseConfig = JSON.parse(typeof __firebase_config !== 'undefined' ? __firebase_config : '{}');
+        const initialAuthToken = typeof __initial_auth_token !== 'undefined' ? __initial_auth_token : null;
+
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+        const auth = getAuth(app);
+        
+        let userId = '';
+
+        const userListContainer = document.getElementById('user-list');
+        const loadingElement = document.getElementById('loading');
+        const errorMessageElement = document.getElementById('error-message');
+
+        const handleError = (error, message) => {
+            console.error(message, error);
+            loadingElement.style.display = 'none';
+            errorMessageElement.textContent = message;
+            errorMessageElement.style.display = 'block';
+        };
+
+        const renderUsers = (users) => {
+            userListContainer.innerHTML = '';
+            if (users.length === 0) {
+                userListContainer.innerHTML = '<p class="text-center text-gray-500 col-span-full">Nenhum usuário encontrado.</p>';
+                return;
+            }
+            users.forEach(user => {
+                const userCard = `
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-sm border border-gray-200">
+                        <p class="text-lg font-semibold text-gray-800">${user.nome}</p>
+                        <p class="text-gray-600 mt-1">Email: ${user.email}</p>
+                        <p class="text-gray-500 text-sm mt-2 break-words">ID: ${user.id}</p>
+                    </div>
+                `;
+                userListContainer.innerHTML += userCard;
+            });
+        };
+
+        const setupAuthAndData = async () => {
+            try {
+                if (initialAuthToken) {
+                    await signInWithCustomToken(auth, initialAuthToken);
+                } else {
+                    await signInAnonymously(auth);
+                }
+                userId = auth.currentUser.uid;
+                
+                // Firestore path for user data
+                const usersCollectionPath = `/artifacts/${appId}/public/data/users`;
+                const usersCollectionRef = collection(db, usersCollectionPath);
+
+                onSnapshot(usersCollectionRef, (snapshot) => {
+                    const users = [];
+                    snapshot.forEach(doc => {
+                        users.push({ id: doc.id, ...doc.data() });
+                    });
+                    renderUsers(users);
+                    loadingElement.style.display = 'none';
+                }, (error) => {
+                    handleError(error, 'Erro ao carregar os dados dos usuários.');
+                });
+                
+            } catch (e) {
+                handleError(e, 'Erro na autenticação do Firebase ou ao iniciar o app.');
+            }
+        };
+
+        setupAuthAndData();
+    </script>
+</body>
+</html>
