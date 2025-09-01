@@ -36,32 +36,31 @@ brasil-tour/
 
 Contém todos os arquivos HTML que compõem a parte visual da aplicação. <br>
 
-cadastro.html: Formulário de cadastro de usuário.<br>
-login.html: Formulário de login de usuário.
+**cadastro.html:** Formulário de cadastro de usuário.<br>
+**login.html:** Formulário de login de usuário.
 <br>
-formulario_destino.html: Formulário para o usuário criar um roteiro de viagem personalizado.
+**formulario_destino.html:** Formulário para o usuário criar um roteiro de viagem personalizado.
 <br>
-modal_roteiro.html: Tela de resposta que exibe o roteiro gerado.
+**modal_roteiro.html:** Tela de resposta que exibe o roteiro gerado.
 <br>
-lista_usuarios.html: Página para listar os usuários cadastrados (conectado ao banco de dados).
+**lista_usuarios.html:** Página para listar os usuários cadastrados (conectado ao banco de dados).
 <br>
-contato.html: Formulário para os usuários enviarem mensagens.
+**contato.html:** Formulário para os usuários enviarem mensagens.
 <br>
-lista_destinos.html: Página para listar os destinos disponíveis (conectado ao banco de dados).
+**lista_destinos.html:** Página para listar os destinos disponíveis (conectado ao banco de dados).
 <br>
 <br>
-banco_de_dados/
 Contém os scripts SQL para a criação das tabelas e a inserção de dados iniciais.
 <br>
-usuarios.sql: Estrutura da tabela de usuários.
+**usuarios.sql:** Estrutura da tabela de usuários.
 <br>
-roteiro_db.sql: Estrutura das tabelas para roteiros e detalhes de viagem.
+**roteiro_db.sql:** Estrutura das tabelas para roteiros e detalhes de viagem.
 <br>
-auth_db.sql: Estrutura da tabela de autenticação para login e cadastro.
+**auth_db.sql:** Estrutura da tabela de autenticação para login e cadastro.
 <br>
-contato_db.sql: Estrutura da tabela para mensagens de contato.
+**contato_db.sql:** Estrutura da tabela para mensagens de contato.
 <br>
-destinos.sql: Estrutura das tabelas de destinos e atividades.
+**destinos.sql:** Estrutura das tabelas de destinos e atividades.
 <br>
 ## Como Executar o Projeto
 
