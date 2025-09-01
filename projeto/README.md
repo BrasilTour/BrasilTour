@@ -1,57 +1,19 @@
-# Brasil Tour: Descubra o Brasil de forma mágica!
+# Brasil Tour: Sistema de Gestão de Turismo
 
-## Descrição
-O projeto Brasil Tour é um sistema para criação e gerenciamento de pacotes de viagem personalizados pelo Brasil. Com ele, os usuários podem montar seu próprio "roteiro mágico", escolhendo destinos e preferências. O sistema armazena as escolhas dos usuários em um banco de dados para gerar roteiros prontos e, futuramente, utilizar inteligência artificial para otimizar as sugestões.
+Este é um projeto de software para um site de turismo no Brasil. O sistema foi desenvolvido com uma arquitetura **Model-View-Controller (MVC)**, garantindo uma organização clara, escalável e de fácil manutenção.
 
-## Integrantes
--[Ana Luiza Lelis] - Matrícula: [12301981]
--[Isabela Valeska] - Matrícula: [12301787]
--[Guilherme Miura] - Matrícula: [12400106]
--[Leonardo Gomes] - Matrícula: [12400335]
+## Funcionalidades Principais
 
-## Estrutura de Diretórios
+-   **Cadastro de Usuário:** Sistema de registro completo para novos usuários.
+-   **Login:** Autenticação de usuários para acesso restrito.
+-   **Gerenciamento de Itinerários:** Ferramenta para criar e gerenciar roteiros de viagem.
+-   **Banco de Dados:** Estrutura para armazenamento e gestão de dados do projeto.
 
-brasil-tour/
-├── public/                 # Arquivos da interface (HTML, CSS, JS)
-│   ├── css/
-│   │   └── style.css
-│   ├── js/
-│   │   └── main.js
-│   └── index.html
-├── src/                    # Código-fonte backend (PHP, C#, etc.)
-│   ├── controllers/
-│   ├── models/
-│   └── views/
-├── database/               # Arquivos de banco de dados e scripts
-│   └── schema.sql
-├── README.md               # Arquivo de descrição do projeto
-└── .gitignore              # Arquivos a serem ignorados pelo Git
+## Arquitetura do Projeto
 
+O projeto segue o padrão de design **MVC** com a seguinte organização de diretórios:
 
-## 10 Funcionalidades Implementadas
-
-1.  **Montar Roteiro Mágico:** Formulário para o usuário inserir preferências de viagem.
-2.  **Visualizar Roteiros Prontos:** Exibição de roteiros gerados a partir das escolhas do usuário.
-3.  **Cadastro de Destinos:** Formulário para o administrador cadastrar novos locais.
-4.  **Listagem de Destinos:** Exibição de todos os destinos disponíveis.
-5.  **Edição de Destinos:** Funcionalidade para o administrador atualizar informações de um destino.
-6.  **Exclusão de Destinos:** Opção para remover um destino do sistema.
-7.  **Login de Administrador:** Autenticação para acesso às funcionalidades de gerenciamento.
-8.  **Listagem de Usuários:** Exibição de todos os usuários cadastrados.
-9.  **Busca de Roteiros:** Ferramenta de pesquisa por roteiros específicos.
-10. **Visualização Detalhada do Roteiro:** Página com informações completas de um roteiro pronto.
-
-## Como Executar o Projeto
-
-### 1. Pré-requisitos
-- **Linguagem:** PHP (ou C#)
-- **Servidor Web:** XAMPP, WAMP ou similar com suporte a Apache e MySQL/MariaDB.
-- **Banco de Dados:** MySQL ou MariaDB.
-
-### 2. Instalação
-```bash
-# Clone o repositório
-git clone [https://github.com/usuario/brasil-tour.git](https://github.com/usuario/brasil-tour.git)
-
-# Acesse a pasta do projeto
-cd brasil-tour
+-   **`models/`**: Contém a lógica de dados, as regras de negócio e a interação com o banco de dados (SQL).
+-   **`views/`**: Responsável pela apresentação da interface do usuário (HTML e CSS).
+-   **`controllers/`**: Gerencia o fluxo de controle, processando a entrada do usuário e coordenando a interação entre as `Models` e as `Views`.
+-   **`public/`**: Armazena arquivos estáticos, como imagens, CSS e JavaScript.
