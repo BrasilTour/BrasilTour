@@ -33,36 +33,18 @@ brasil-tour/
 └── .gitignore              # Arquivos a serem ignorados pelo Git
 
 ## 10 Funcionalidades Implementadas
+1.  **Montar Roteiro Mágico:** Formulário para o usuário inserir preferências de viagem.
+2.  **Visualizar Roteiros Prontos:** Exibição de roteiros gerados a partir das escolhas do usuário.
+3.  **Cadastro de Destinos:** Formulário para o administrador cadastrar novos locais.
+4.  **Listagem de Destinos:** Exibição de todos os destinos disponíveis.
+5.  **Edição de Destinos:** Funcionalidade para o administrador atualizar informações de um destino.
+6.  **Exclusão de Destinos:** Opção para remover um destino do sistema.
+7.  **Login de Administrador:** Autenticação para acesso às funcionalidades de gerenciamento.
+8.  **Listagem de Usuários:** Exibição de todos os usuários cadastrados.
+9.  **Busca de Roteiros:** Ferramenta de pesquisa por roteiros específicos.
+10. **Visualização Detalhada do Roteiro:** Página com informações completas de um roteiro pronto.
 
-Contém todos os arquivos HTML que compõem a parte visual da aplicação. <br>
 
-**cadastro.html:** Formulário de cadastro de usuário.<br>
-**login.html:** Formulário de login de usuário.
-<br>
-**formulario_destino.html:** Formulário para o usuário criar um roteiro de viagem personalizado.
-<br>
-**modal_roteiro.html:** Tela de resposta que exibe o roteiro gerado.
-<br>
-**lista_usuarios.html:** Página para listar os usuários cadastrados (conectado ao banco de dados).
-<br>
-**contato.html:** Formulário para os usuários enviarem mensagens.
-<br>
-**lista_destinos.html:** Página para listar os destinos disponíveis (conectado ao banco de dados).
-<br>
-<br>
-Contém os scripts SQL para a criação das tabelas e a inserção de dados iniciais.
-<br>
-<br>
-**usuarios.sql:** Estrutura da tabela de usuários.
-<br>
-**roteiro_db.sql:** Estrutura das tabelas para roteiros e detalhes de viagem.
-<br>
-**auth_db.sql:** Estrutura da tabela de autenticação para login e cadastro.
-<br>
-**contato_db.sql:** Estrutura da tabela para mensagens de contato.
-<br>
-**destinos.sql:** Estrutura das tabelas de destinos e atividades.
-<br>
 ## Como Executar o Projeto
 
 ### 1. Pré-requisitos
