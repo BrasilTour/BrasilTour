@@ -37,7 +37,6 @@ brasil-tour/
 Contém todos os arquivos HTML que compõem a parte visual da aplicação. <br>
 
 cadastro.html: Formulário de cadastro de usuário.<br>
-<br>
 login.html: Formulário de login de usuário.
 <br>
 formulario_destino.html: Formulário para o usuário criar um roteiro de viagem personalizado.
@@ -51,7 +50,7 @@ contato.html: Formulário para os usuários enviarem mensagens.
 lista_destinos.html: Página para listar os destinos disponíveis (conectado ao banco de dados).
 <br>
 <br>
-🗄️ banco_de_dados/
+banco_de_dados/
 Contém os scripts SQL para a criação das tabelas e a inserção de dados iniciais.
 <br>
 usuarios.sql: Estrutura da tabela de usuários.
