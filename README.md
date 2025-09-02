@@ -16,33 +16,33 @@ Este repositório contém os arquivos de um projeto de web development focado em
 [3C1]
 
 ## Estrutura de Diretórios
-projeto/
-├── config/
-│   └── database.php
-├── controllers/
-│   ├── AuthController.php
-│   ├── DestinoController.php
-│   ├── PreferenciasController.php
-│   └── RoteiroController.php
-├── models/
-│   ├── Destino.php
-│   ├── PreferenciasUsuario.php
-│   ├── Roteiro.php
-│   └── Usuario.php
-├── repositories/
-│   ├── DestinoRepository.php
-│   ├── PreferenciasRepository.php
-│   ├── RoteiroRepository.php
-│   └── UsuarioRepository.php
-├── public/
-│   ├── css/
-│   ├── js/
-│   ├── admin_login.html
-│   ├── erro.html
-│   └── sucesso.html
-└── views/
-    ├── admin_destinos.php
-    └── admin_usuarios.php
+projeto/ <br>
+├── config/ <br>
+│   └── database.php <br>
+├── controllers/ <br>
+│   ├── AuthController.php <br>
+│   ├── DestinoController.php <br>
+│   ├── PreferenciasController.php <br>
+│   └── RoteiroController.php <br>
+├── models/ <br>
+│   ├── Destino.php <br>
+│   ├── PreferenciasUsuario.php <br>
+│   ├── Roteiro.php <br>
+│   └── Usuario.php <br>
+├── repositories/ <br>
+│   ├── DestinoRepository.php <br>
+│   ├── PreferenciasRepository.php <br>
+│   ├── RoteiroRepository.php <br>
+│   └── UsuarioRepository.php <br>
+├── public/ <br>
+│   ├── css/ <br>
+│   ├── js/ <br>
+│   ├── admin_login.html <br>
+│   ├── erro.html <br>
+│   └── sucesso.html <br>
+└── views/ <br>
+    ├── admin_destinos.php <br>
+    └── admin_usuarios.php <br>
 
     
 ## 10 Funcionalidades Implementadas
