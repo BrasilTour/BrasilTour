@@ -16,22 +16,35 @@ Este repositório contém os arquivos de um projeto de web development focado em
 [3C1]
 
 ## Estrutura de Diretórios
-brasil-tour/
-├── public/                 # Arquivos da interface (HTML, CSS, JS)<br>
-│   ├── css/<br>
-│   │   └── style.css  <br>
-│   ├── js/  <br>
-│   │   └── main.js   <br>
-│   └── index.html   <br>
-├── src/                    # Código-fonte backend (PHP, C#, etc.)   <br>
-│   ├── controllers/    <br>
-│   ├── models/    <br>
-│   └── views/    <br>
-├── database/               # Arquivos de banco de dados e scripts   <br>
-│   └── schema.sql    <br>
-├── README.md               # Arquivo de descrição do projeto    <br>
-└── .gitignore              # Arquivos a serem ignorados pelo Git
+projeto/
+├── config/
+│   └── database.php
+├── controllers/
+│   ├── AuthController.php
+│   ├── DestinoController.php
+│   ├── PreferenciasController.php
+│   └── RoteiroController.php
+├── models/
+│   ├── Destino.php
+│   ├── PreferenciasUsuario.php
+│   ├── Roteiro.php
+│   └── Usuario.php
+├── repositories/
+│   ├── DestinoRepository.php
+│   ├── PreferenciasRepository.php
+│   ├── RoteiroRepository.php
+│   └── UsuarioRepository.php
+├── public/
+│   ├── css/
+│   ├── js/
+│   ├── admin_login.html
+│   ├── erro.html
+│   └── sucesso.html
+└── views/
+    ├── admin_destinos.php
+    └── admin_usuarios.php
 
+    
 ## 10 Funcionalidades Implementadas
 1.  **Montar Roteiro:** Formulário para o usuário inserir preferências de viagem.
 2.  **Visualizar Roteiros Prontos:** Exibição de roteiros gerados a partir das escolhas do usuário.
