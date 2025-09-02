@@ -11,10 +11,16 @@ Este é um projeto de software para um site de turismo no Brasil. O sistema foi 
 
 ## Arquitetura do Projeto
 
-O projeto segue o padrão de design **MVC** com a seguinte organização de diretórios:
+O projeto segue o padrão de design MVC com a seguinte organização de diretórios:
 
--   **`models/`**: Contém a lógica de dados, as regras de negócio e a interação com o banco de dados (SQL).
--   **`views/`**: Responsável pela apresentação da interface do usuário (HTML e CSS).
--   **`controllers/`**: Gerencia o fluxo de controle, processando a entrada do usuário e coordenando a interação entre as `Models` e as `Views`.
--   **`public/`**: Armazena arquivos estáticos, como imagens, CSS e JavaScript.
+config/: Contém arquivos de configuração, como o database.php, que é responsável por gerenciar a conexão com o banco de dados.
 
+controllers/: Gerencia o fluxo de controle, processando a entrada do usuário e coordenando a interação entre as outras pastas. É aqui que arquivos como AuthController.php e DestinoController.php estão localizados.
+
+models/: Contém as classes que representam os dados e as regras de negócio do seu projeto. É onde fica a lógica para o objeto PreferenciasUsuario.php.
+
+repositories/: (NOVO) Contém a lógica de dados, as regras de negócio e a interação direta com o banco de dados (SQL). Essa pasta foi criada para separar o acesso aos dados da representação dos dados, tornando a arquitetura mais organizada. É aqui que você encontra arquivos como UsuarioRepository.php e DestinoRepository.php.
+
+public/: Armazena arquivos que são diretamente acessíveis pelo navegador, como o index.html, admin_login.html e o arquivo de estilo style.css.
+
+views/: Responsável pela apresentação da interface do usuário (HTML e CSS). Os arquivos do painel administrativo, como admin_destinos.php e admin_usuarios.php, vivem nesta pasta.
