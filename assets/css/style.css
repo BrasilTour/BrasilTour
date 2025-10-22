@@ -1,0 +1,450 @@
+/* ========================================================= */
+/* --- style.css: ESTILOS GERAIS (NAVBAR, FOOTER, GRID) --- */
+/* ========================================================= */
+
+/* --- RESET BÁSICO E FONTES --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: #374151; /* Cor de texto padrão escuro */
+    background-color: #f9fafb; /* Fundo cinza muito claro */
+}
+
+/* Utilitários */
+/* --- GRID PRINCIPAL DE 3 COLUNAS (USADO NO CONTEÚDO) --- */
+.secao-conteudo {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr; /* 1 (Inspire), 2 (Conteúdo/Form), 1 (Inspire) */
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10% 40px;
+}
+
+.box-aqui {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
+}
+
+.card {
+    margin-bottom: 30px;
+}
+
+.padrao-letra {
+    font-size: 1.1em;
+    font-weight: 700;
+    color: #1e40af; /* Azul forte */
+    margin-bottom: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+}
+.padrao-letra i {
+    margin-right: 8px;
+    color: #10b981; /* Verde/Ciano */
+}
+
+.cam{
+    margin-right: 2%;
+}
+
+
+/* --- NAVBAR (BRANCA/CLARA) --- */
+.navbar {
+    background-color: #fff; /* Fundo branco */
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar-logo {
+    display: flex;
+    align-items: center;
+    color: #1e3a6a; 
+}
+
+.navbar-logo .logo-icon {
+    font-size: 1.8em;
+    color: #10b981; 
+    margin-right: 10px;
+    background: linear-gradient(45deg, #10b981, #1e40af);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.navbar-logo .logo-text-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.navbar-logo .logo-text {
+    font-size: 1.4em;
+    font-weight: 800;
+    line-height: 1;
+    color: #1e40af; /* Azul Forte */
+}
+
+.navbar-logo .explore-text-nav {
+    font-size: 0.75em;
+    color: #6b7280;
+    margin-top: 2px;
+}
+
+.navbar-menu {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.navbar-menu .nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.navbar-menu .nav-item {
+    color: #374151;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 8px 15px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-menu .nav-item i {
+    margin-right: 8px;
+    color: #1e40af; /* Ícones azuis */
+}
+
+.navbar-menu .nav-item .fa-chevron-down {
+    margin-left: 8px;
+    margin-right: 0;
+    font-size: 0.7em;
+    color: #6b7280; 
+}
+
+.navbar-menu .nav-item:hover, .navbar-menu .dropdown:hover .dropdown-toggle {
+    color: #1e40af;
+    background-color: #f3f4f6;
+}
+
+/* Dropdown styling */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 200px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.1);
+    z-index: 1;
+    border-radius: 8px; /* Mais arredondado */
+    overflow: hidden; 
+    padding: 5px 0;
+    top: 100%; 
+    left: 50%;
+    transform: translateX(-50%); 
+    margin-top: 10px; 
+    border: 1px solid #eee;
+}
+
+.dropdown-content a {
+    color: #374151;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    font-weight: 400;
+}
+
+.dropdown-content a i {
+    margin-right: 10px;
+    color: #10b981; 
+}
+
+.dropdown-content a:hover {
+    background-color: #f3f4f6;
+    color: #1e40af;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* User section */
+.navbar-user {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.navbar-user .user-greeting {
+    color: #374151;
+    font-weight: 600;
+    font-size: 0.95em;
+}
+
+.navbar-user .btn-sair {
+    background-color: transparent;
+    border: 1px solid #ef4444; 
+    color: #ef4444; 
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.navbar-user .btn-sair:hover {
+    background-color: #ef4444;
+    color: #fff;
+}
+
+
+/* --- FOOTER (ESCURO - CONFORME O PEDIDO ANTERIOR) --- */
+.rodape {
+    background-color: #1e3a6a; /* Azul marinho escuro */
+    color: #f3f4f6; /* Texto branco-acinzentado */
+    padding: 50px 40px 20px 40px; /* Mais espaço */
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr; /* Proporção 2:1:1 */
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto 30px auto;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    color: #f3f4f6;
+}
+
+.footer-logo i {
+    font-size: 1.5em;
+    color: #10b981; /* Ícone verde */
+    margin-right: 10px;
+}
+
+.footer-logo .logo-text {
+    font-size: 1.2em;
+    font-weight: 800;
+}
+
+.explore-text {
+    display: block;
+    margin-bottom: 15px;
+    color: #9ca3af; /* Cinza claro */
+}
+
+.footer-description {
+    font-size: 0.9em;
+    line-height: 1.6;
+    color: #ccc;
+}
+
+.footer-title {
+    font-size: 1.1em;
+    font-weight: 700;
+    color: #10b981; /* Título verde */
+    margin-bottom: 15px;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 8px;
+}
+
+.footer-links a {
+    color: #f3f4f6;
+    text-decoration: none;
+    font-size: 0.9em;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #10b981; /* Hover verde */
+}
+
+.footer-links .contact-info {
+    color: #ccc;
+    font-size: 0.9em;
+    margin-top: 5px;
+}
+
+.footer-copyright {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #374151; /* Linha divisória sutil */
+    font-size: 0.8em;
+    color: #9ca3af;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* --- ESTILOS PARA O EFEITO DE HOVER EM IMAGEM --- */
+
+/* 1. Container principal (Pai) */
+.card-hover-efeito {
+    position: relative; /* Essencial para posicionar o overlay e o texto */
+    overflow: hidden; /* Garante que o zoom da imagem fique dentro dos limites */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer; /* Indica que é clicável */
+    height: 250px; /* Altura fixa para todos os cards (ajuste conforme necessário) */
+}
+
+/* 2. Imagem */
+.img-card-efeito {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease; /* Transição suave para o zoom (scale) */
+}
+
+/* 3. Overlay (Camada de cor semi-transparente) */
+.card-hover-efeito::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: background-color 0.4s ease; /* Transição suave para a mudança de opacidade */
+    z-index: 1;
+}
+
+/* 4. Texto (que fica sobre a imagem) */
+.texto-card-efeito {
+    position: absolute;
+    bottom: 20px; /* Posiciona o texto na parte inferior */
+    left: 20px;
+    right: 20px;
+    z-index: 2; /* Fica acima do overlay */
+    color: white;
+    font-size: 1.2em;
+    font-weight: 700;
+    opacity: 1; /* Visível por padrão */
+    transition: all 0.4s ease;
+    /* Efeito de zoom no texto (para corresponder à imagem) */
+    transform: scale(1); 
+}
+/* --- ESTILOS PARA O EFEITO DE HOVER EM IMAGEM --- */
+
+/* 1. Container principal (Pai) */
+.card-hover-efeito {
+position: relative; /* Essencial para posicionar o overlay e o texto */
+overflow: hidden; /* Garante que o zoom da imagem fique dentro dos limites */
+border-radius: 8px;
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+cursor: pointer; /* Indica que é clicável */
+height: 250px; /* Altura fixa para todos os cards (ajuste conforme necessário) */
+}
+
+/* 2. Imagem */
+.img-card-efeito {
+width: 100%;
+height: 100%;
+object-fit: cover;
+transition: transform 0.4s ease; /* Transição suave para o zoom (scale) */
+}
+
+/* 3. Overlay (Camada de cor semi-transparente) */
+.card-hover-efeito::after {
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+/* CORREÇÃO 1: Background inicial totalmente transparente (para a transição) */
+background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(255, 255, 255, 0));
+    
+/* CORREÇÃO 2: A transição deve ser na propriedade 'background' */
+transition: background 0.4s ease;
+z-index: 1;
+}
+
+/* 4. Texto (que fica sobre a imagem) */
+.texto-card-efeito {
+position: absolute;
+bottom: 20px; /* Posiciona o texto na parte inferior */
+left: 20px;
+right: 20px;
+z-index: 2; /* Fica acima do overlay */
+color: white;
+font-size: 1.2em;
+font-weight: 700;
+opacity: 1; /* Visível por padrão */
+transition: all 0.4s ease;
+/* Efeito de zoom no texto (para corresponder à imagem) */
+transform: scale(1); 
+}
+
+/* --- EFEITOS NO HOVER (QUANDO O MOUSE ESTÁ POR CIMA) --- */
+
+.card-hover-efeito:hover .img-card-efeito {
+transform: scale(1.05); /* Aplica zoom de 5% na imagem */
+}
+
+.card-hover-efeito:hover::after {
+/* CORREÇÃO 3: Usar 'background' em vez de 'background-color' */
+/* Degradê de Preto (60% opaco) para Branco (Totalmente transparente) */
+background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(255, 255, 255, 0));
+}
+
+.card-hover-efeito:hover .texto-card-efeito {
+transform: scale(1.02); /* Zoom sutil no texto para acompanhamento */
+}
+
+/* --- MEDIA QUERIES (RESPONSIVIDADE) --- */
+@media (max-width: 992px) {
+    .secao-conteudo {
+        grid-template-columns: 1fr; /* Colunas empilhadas no mobile */
+    }
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        text-align: center;
+    }
+    .footer-col-1, .footer-col-2, .footer-col-3 {
+        padding-bottom: 15px;
+        border-bottom: 1px solid #374151;
+    }
+    .footer-col-3 {
+        border-bottom: none;
+    }
+    .footer-logo {
+        justify-content: center;
+    }
+}

@@ -1,0 +1,430 @@
+/* Importa variáveis e estilos globais */
+@import url('home.css');
+
+
+/* ---------------------------------- */
+/* ESTILOS DA PÁGINA DE PROMOÇÕES     */
+/* ---------------------------------- */
+
+.principal-promocoes {
+    margin-top: 10%;
+    padding: 60px 40px;
+    text-align: center;
+    background-color: var(--cor-fundo-claro, #f4f7f6); 
+}
+
+.titulo-pagina {
+
+    font-size: 2.0em;
+    font-weight: 300;
+    color: #111827;
+    margin-bottom: 5px;
+}
+
+.subtitulo-pagina {
+    font-size: 1.1em;
+    color: var(--cor-secundaria);
+    margin-bottom: 50px;
+}
+/* Variáveis para cores */
+:root {
+    --cor-primaria: #0d6efd;
+    --cor-bronze: #e6522c;
+    --cor-prata: #212529;
+    --cor-ouro: #ffc107;
+    --fundo-claro: #f8f9fa;
+    --texto-escuro: #495057;
+    /* Variáveis necessárias para o modal (se não estiverem em home.css) */
+    --cor-fundo-header: white;
+    --cor-texto-escuro: #495057;
+    --cor-cta-primario: #e6522c; /* Usando cor bronze como CTA principal */
+    --cor-hover-link: #28a745; /* Cor verde para ícones de lista */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--fundo-claro);
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+/* 1. ESTRUTURA PRINCIPAL: DISPLAY GRID */
+.container-precos {
+    /* Define a estrutura de grade: 3 colunas de largura igual */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px; /* Espaçamento entre os cartões */
+    max-width: 1200px;
+    width: 100%;
+}
+
+/* 2. CONTEÚDO DO CARTÃO: DISPLAY FLEX (Empilhamento Vertical) */
+.cartao {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    padding: 40px 25px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 1px solid #dee2e6;
+
+    /* Configura o cartão para empilhar o conteúdo */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza horizontalmente o preço, título e botão */
+    text-align: center;
+}
+
+
+.titulo-plano {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 10px 0 5px 0;
+    color: var(--texto-escuro);
+}
+
+.preco-plano {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+    color: var(--texto-escuro);
+}
+
+.preco-plano span {
+    font-size: 1rem;
+    font-weight: normal;
+    color: #6c757d;
+}
+
+.descricao-plano {
+    font-size: 0.95rem;
+    color: #6c757d;
+    margin: 15px 0 25px 0;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e9ecef;
+    width: 100%; /* Garante que a linha ocupe a largura total */
+}
+
+/* Lista de Benefícios: Flex para alinhamento e flex-grow */
+.lista-beneficios {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    width: 100%;
+    text-align: left;
+    color: var(--texto-escuro);
+    line-height: 1.6;
+
+    /* TOMA TODO O ESPAÇO DISPONÍVEL para empurrar o botão para baixo */
+    flex-grow: 1; 
+}
+
+.lista-beneficios li {
+    /* Flex para alinhar o check e o texto */
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+    font-size: 0.95rem;
+}
+
+.lista-beneficios li span {
+    color: #28a745; /* Cor para o ✅ */
+    font-weight: bold;
+}
+
+/* Botão: Alinhado na parte inferior */
+.botao-plano {
+    /* Garante que o botão fique no final do cartão */
+    margin-top: auto; 
+    width: 100%;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s, opacity 0.3s;
+}
+
+/* Cores dos Botões */
+.btn-bronze {
+    background-color: var(--cor-bronze);
+    color: white;
+}
+
+.btn-prata {
+    background-color: var(--cor-prata);
+    color: white;
+}
+
+.btn-ouro {
+    background-color: var(--cor-ouro);
+    color: var(--cor-prata);
+}
+
+.botao-plano:hover {
+    opacity: 0.9;
+}
+
+/* 3. DESTAQUE DO CARTÃO POPULAR (PRATA) */
+.cartao.popular {
+    position: relative; /* Necessário para posicionar a faixa */
+    padding-top: 55px; /* Adiciona espaço para a faixa */
+    background-color: var(--cor-primaria);
+    color: white;
+    transform: scale(1.05); /* Efeito de destaque */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+    border: none;
+}
+
+.cartao.popular .faixa-popular {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #3f6eff; /* Tom de azul ligeiramente diferente */
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    padding: 8px 0;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+.cartao.popular .titulo-plano,
+.cartao.popular .preco-plano {
+    color: white;
+}
+
+.cartao.popular .descricao-plano,
+.cartao.popular .preco-plano span {
+    color: rgba(255, 255, 255, 0.8);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.cartao.popular .lista-beneficios li {
+    color: white;
+}
+
+/* Estilos de Tipografia */
+.icone-bronze {
+    font-size: 3rem;
+    line-height: 1;
+    color: #ea580c;
+}
+
+.icone-prata {
+    font-size: 3rem;
+    line-height: 1;
+}
+
+.icone-ouro {
+    font-size: 3rem;
+    line-height: 1;
+    color: #eab308;
+}
+
+
+.icone-verde{
+    color: #39cb6f;
+}
+
+/* Container para garantir a centralização da tag na página */
+.tag-destaque-container {
+    /* Centraliza a tag horizontalmente na página */
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px; /* Espaço entre a tag e o título */
+    margin-top: -30px; /* Puxa a tag um pouco para cima, se necessário */
+}
+
+.tag-destaque {
+    /* Configuração visual da tag */
+    background-color: #fffbe4; /* Fundo amarelo/dourado bem claro */
+    color: #a77e26; /* Cor do texto e ícone (marrom/dourado) */
+    border: 1px solid #f1e0ac; /* Borda sutil */
+    border-radius: 50px; /* Borda bem arredondada para o formato pill/cápsula */
+    padding: 8px 18px; /* Espaçamento interno */
+    font-size: 0.9rem;
+    font-weight: 600;
+    
+    /* Configuração FLEX para alinhar o ícone e o texto */
+    display: flex;
+    align-items: center; /* Alinhamento vertical centralizado */
+    gap: 8px; /* Espaçamento entre o ícone e o texto */
+    
+    /* Evita que a tag quebre em várias linhas */
+    white-space: nowrap; 
+    
+    /* Adiciona uma pequena sombra para dar profundidade */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.icone-destaque {
+    font-size: 1rem;
+}
+
+/* ========================= */
+/* --- ESTILOS DOS PACOTES/PLANOS (GRID) --- */
+/* (Trecho omitido para brevidade, sem alterações) */
+/* ========================= */
+
+
+/* ========================= */
+/* --- MODAL ESCOLHER PLANO (APLICADO O DESIGN SOLICITADO) --- */
+/* ========================= */
+
+.modal-plano {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.8);
+  backdrop-filter: blur(4px);
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.modal-conteudo-plano {
+  background-color: var(--cor-fundo-header); /* Branco */
+  border-radius: 12px;
+  max-width: 600px; /* Ajuste para ter mais cara de um modal de ação */
+  width: 100%;
+  padding: 40px;
+  position: relative;
+  animation: aparecerModal 0.3s ease;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes aparecerModal {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* Novo layout para o Modal - Flexbox para o ícone e título */
+.modal-grid-layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centraliza todo o conteúdo do modal */
+  gap: 20px;
+  text-align: center;
+}
+
+.icone-plano-modal {
+    font-size: 3.5rem; /* Ícone maior para destaque */
+    color: var(--cor-cta-primario); /* Cor de destaque, como o bronze */
+    margin-bottom: 5px;
+}
+
+.modal-titulo {
+  font-size: 2.0em;
+  color: var(--texto-escuro);
+  font-weight: 700;
+  margin: 0; /* Remove margem padrão */
+}
+
+.modal-paragrafo {
+  color: var(--texto-escuro);
+  line-height: 1.6;
+  text-align: center; /* Centraliza o parágrafo */
+  margin: 10px 0 25px 0;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.modal-lista {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 25px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  text-align: left; /* Alinha a lista à esquerda dentro do modal */
+}
+
+.modal-lista li {
+  display: flex;
+  align-items: flex-start; /* Alinha o ícone com o topo do texto */
+  gap: 10px;
+  color: var(--texto-escuro);
+  font-size: 1rem;
+}
+
+.modal-lista i {
+  color: var(--cor-hover-link); /* Verde para o passo a passo */
+  font-size: 1.2rem;
+  min-width: 20px;
+}
+
+.modal-botao {
+  background-color: var(--cor-cta-primario); /* Usando a cor de destaque (bronze) */
+  color: white;
+  border: none;
+  padding: 14px 30px;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  align-self: stretch; /* Ocupa a largura total (como um botão CTA de rodapé) */
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.modal-botao:hover {
+  background-color: #e07b00; /* Hover do CTA */
+  transform: translateY(-2px);
+}
+
+.fechar-modal {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 28px;
+  color: #333;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.fechar-modal:hover {
+  color: var(--cor-primaria);
+}
+
+
+@media (max-width: 600px) {
+  .modal-conteudo-plano {
+    padding: 25px;
+  }
+
+  .modal-titulo {
+    font-size: 1.6em;
+  }
+}
+
+
+/* Media Queries para Responsividade */
+@media (max-width: 992px) {
+    /* Em telas menores, passa para 1 coluna */
+    .container-precos {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    /* Remove o scale e ajusta o padding para o cartão popular */
+    .cartao.popular {
+        transform: none;
+        padding-top: 40px; /* Reduz o padding superior */
+    }
+}
+
+@media (max-width: 576px) {
+    body {
+        padding: 10px;
+    }
+}

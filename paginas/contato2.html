@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entre em Contato!</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../assets/css/contato2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+    </style>
+    
+<!--HEADER-->
+    <header class="header-principal">
+        <div class="header-logo">
+           <img  id="logo-img" src="../assets/img/logo.png" alt="BrasilTour Logo" >
+            <div class="logo-texto">
+                <span class="header-titulo">BrasilTour</span>
+                <small class="logo-subtitulo">Explore o Brasil!</small>
+            </div>
+        </div>
+
+        <nav class="nav-principal">
+            <ul class="lista-nav">
+                <li class="item-nav"><a href="../home.html" class="link-nav"><i class="fas fa-home icone-nav"></i> Home</a></li>
+                
+                <li class="item-nav dropdown-menu">
+                    <a href="#" class="link-nav dropdown-toggle"><i class="fas fa-mountain icone-nav"></i>Aventuras</a>
+                    <div class="dropdown-conteudo">
+                        <a href="../paginas/passeios-lazer.html" class="link-dropdown"><i class="fas fa-map-marker-alt icone-dropdown"></i> Passeios & Lazer</a>
+                        <a href="../paginas/aguas-calmaria.html" class="link-dropdown"><i class="fas fa-water icone-dropdown"></i> Águas & Calmaria</a>
+                        <a href="../paginas/turismo-historico.html" class="link-dropdown"><i class="fas fa-building icone-dropdown"></i> Turismo Histórico</a>
+                        <a href="../paginas/roteiros-personalizados.html" class="link-dropdown"><i class="fas fa-star icone-dropdown"></i> Roteiro Personalizado</a>
+                    </div>
+                </li>
+                
+                <li class="item-nav dropdown-menu">
+                    <a href="#" class="link-nav dropdown-toggle"><i class="fas fa-tags iconte-nav"></i>Ofertas</a>
+                    <div class="dropdown-conteudo">
+                        <a href="../paginas/promocoes.html" class="link-dropdown"><i class="fas fa-tags icone-dropdown"></i> Promoções</a>
+                        <a href="../paginas/contato2.html" class="link-dropdown"><i class="fas fa-envelope icone-dropdown"></i> Contato</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="bloco-usuario">
+            <span class="texto-ola">Olá, Brasil</span>
+           <a href="../paginas/cadastro.html">  <button class="btn-sair"><i class="fas fa-sign-out-alt icone-btn"></i> Sair</button></a>
+        </div>
+</header>
+
+    <!--Fale conosco-->
+        <div id="pagina-contato">
+
+        <section class="secao-topo">
+            <h1 class="titulo-principal">Fale Conosco</h1>
+            <p class="descricao">Tem alguma dúvida ou quer planejar sua próxima viagem? <br> Estamos aqui para ajudar.</p>
+        </section>
+
+        <div id="grid-principal">
+
+            <section class="info-contato-container">
+                <h2>Informações de Contato</h2>
+
+                <div class="item-contato-flex">
+                    <div class="icone-circulo azul-claro">
+                        <span class="icone-contato">✉️</span>
+                    </div>
+                    <div>
+                        <p class="titulo-item">Email</p>
+                        <p class="detalhe-item">contato@brasiltour.com</p>
+                    </div>
+                </div>
+
+                <div class="item-contato-flex">
+                    <div class="icone-circulo azul-claro">
+                        <span class="icone-contato">📞</span>
+                    </div>
+                    <div>
+                        <p class="titulo-item">Telefone</p>
+                        <p class="detalhe-item">(11) 9999-9999</p>
+                    </div>
+                </div>
+                
+                <div class="item-contato-flex">
+                    <div class="icone-circulo azul-claro">
+                        <span class="icone-contato">📍</span>
+                    </div>
+                    <div>
+                        <p class="titulo-item">Endereço</p>
+                        <p class="detalhe-item">Av. Paulista, 1000, São Paulo - SP</p>
+                    </div>
+                </div>
+
+            </section>
+
+            <!--trem de envar a mensagem-->
+            <section class="form-contato-container">
+                <h2>Envie sua mensagem</h2>
+                
+                <form class="formulario-flex">
+                    <input type="text" placeholder="Nome completo" required>
+                    <input type="email" placeholder="Seu melhor email" required>
+                    <input type="tel" placeholder="Telefone (opcional)">
+                    
+                    <select class="campo-select">
+                        <option value="" disabled selected>Qual seu interesse?</option>
+                        <option>Pacotes de Viagem</option>
+                        <option>Hospedagem</option>
+                        <option>Outro Assunto</option>
+                    </select>
+
+                    <textarea placeholder="Assunto"></textarea>
+                    
+                    <textarea placeholder="Sua mensagem..."></textarea>
+                    
+                    <button type="submit" class="botao-enviar-final">
+                        <span class="icone-aviao">✈︎</span> Enviar Mensagem
+                    </button>
+                </form>
+
+            </section>
+
+        </div>
+
+    </div>
+    <footer class="rodape-principal">
+        <div class="container-rodape">
+            
+            <div class="rodape-coluna rodape-info">
+                <div class="header-logo logo-rodape">
+                    <img src="../assets/img/logo.png" alt="BrasilTour Logo" id="logo-img-rodape">
+                    <div class="logo-texto">
+                        <span class="logo-titulo">BrasilTour</span>
+                        <small class="logo-subtitulo">Explore o Brasil com quem conhece</small>
+                    </div>
+                </div>
+                <p class="rodape-descricao">
+                    Criamos roteiros personalizados que conectam você às belezas
+                    naturais, cultura rica e experiências únicas que o Brasil tem a
+                    oferecer.
+                </p>
+            </div>
+
+            <div class="rodape-coluna rodape-links list escolhas">
+                <h5 class="rodape-titulo-coluna">Aventuras</h5>
+                <a href="../paginas/passeios-lazer.html" class="link-rodape">Passeios & Lazer</a>
+                <a href="../paginas/aguas-calmaria.html" class="link-rodape">Águas & Calmaria</a>
+                <a href="../paginas/turismo-historico.html" class="link-rodape">Turismo Histórico</a>
+                <a href="../paginas/roteiros-personalizados.html" class="link-rodape">Roteiro Personalizado</a>
+            </div>
+
+            <div class="rodape-coluna rodape-links list escolhas">
+                <h5 class="rodape-titulo-coluna">Contato</h5>
+                <a href="../paginas/contato2.html" class="link-rodape">Fale Conosco</a>
+                <a href="../paginas/promocoes.html" class="link-rodape">Promoções</a>
+                <span class="info-rodape-contato">contato@brasiltour.com</span>
+                <span class="info-rodape-contato">(11) 9999-9999</span>
+            </div>
+
+        </div>
+
+    <footer class="rodape-direitos">
+        <p>&copy; 2025 BrasilTour. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+
+    
+
+</body>
+</html>

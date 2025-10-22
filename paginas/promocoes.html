@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BrasilTour - Promoções Imperdíveis</title>
+
+  <link rel="stylesheet" href="../assets/css/home.css">
+  <link rel="stylesheet" href="../assets/css/promocoes.css">
+  <script src="../assets/js/promo.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header class="header-principal">
+        <div class="header-logo">
+           <img  id="logo-img" src="../assets/img/logo.png" alt="BrasilTour Logo" >
+            <div class="logo-texto">
+                <span class="header-titulo">BrasilTour</span>
+                <small class="logo-subtitulo">Explore o Brasil!</small>
+            </div>
+        </div>
+
+        <nav class="nav-principal">
+            <ul class="lista-nav">
+                <li class="item-nav"><a href="../home.html" class="link-nav"><i class="fas fa-home icone-nav"></i> Home</a></li>
+                
+                <li class="item-nav dropdown-menu">
+                    <a href="#" class="link-nav dropdown-toggle"><i class="fas fa-mountain icone-nav"></i> Aventuras </i></a>
+                    <div class="dropdown-conteudo">
+                        <a href="../paginas/passeios-lazer.html" class="link-dropdown"><i class="fas fa-map-marker-alt icone-dropdown"></i> Passeios & Lazer</a>
+                        <a href="../paginas/aguas-calmaria.html" class="link-dropdown"><i class="fas fa-water icone-dropdown"></i> Águas & Calmaria</a>
+                        <a href="../paginas/turismo-historico.html" class="link-dropdown"><i class="fas fa-building icone-dropdown"></i> Turismo Histórico</a>
+                        <a href="../paginas/roteiros-personalizados.html" class="link-dropdown"><i class="fas fa-star icone-dropdown"></i> Roteiro Personalizado</a>
+                    </div>
+                </li>
+                
+                <li class="item-nav dropdown-menu">
+                    <a href="#" class="link-nav dropdown-toggle"><i class="fas fa-tags iconte-nav"></i> Ofertas</a>
+                    <div class="dropdown-conteudo">
+                        <a href="../paginas/promocoes.html" class="link-dropdown"><i class="fas fa-percentage icone-dropdown"></i> Promoções</a>
+                        <a href="../paginas/contato2.html" class="link-dropdown"><i class="fas fa-envelope icone-dropdown"></i> Contato</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="bloco-usuario">
+            <span class="texto-ola">Olá, Brasil</span>
+           <a href="../paginas/cadastro.html">  <button class="btn-sair"><i class="fas fa-sign-out-alt icone-btn"></i> Sair</button></a>
+        </div>
+    </header>
+
+  <main class="principal-promocoes">
+    <div class="tag-destaque-container">
+      <span class="tag-destaque">
+        <i class="fa-solid fa-wand-sparkles icone-destaque"></i>
+        Experiências Premium
+      </span>
+    </div>
+
+    <div class="titulo-pagina">
+      <h2>Eleve sua Viagem a Outro Nível</h2>
+    </div>
+
+    <p class="subtitulo-pagina"> 
+      Nossos pacotes premium são desenhados para oferecer mais conforto, exclusividade e 
+      <br> momentos inesquecíveis. Escolha o nível de experiência que você merece.
+    </p>
+
+    <div class="container-precos">
+      <div class="cartao bronze">
+        <div class="cabecalho-plano">
+          <span class="icone-bronze"><i class="fa-regular fa-gem"></i></span>
+          <p class="titulo-plano">Pacote Bronze</p>
+          <p class="preco-plano">R$49 <span>/por dia</span></p>
+        </div>
+        <p class="descricao-plano">Ideal para quem busca um toque de exclusividade e conforto em sua viagem.</p>
+        <ul class="lista-beneficios">
+          <li><span><i class="fa-solid fa-check-double"></i></span> Suporte prioritário via WhatsApp</li>
+          <li><span><i class="fa-solid fa-check-double"></i></span> Sugestões de restaurantes exclusivos</li>
+          <li><span><i class="fa-solid fa-check-double"></i></span> Welcome gift no hotel</li>
+          <li><span><i class="fa-solid fa-check-double"></i></span> Acesso a um roteiro digital premium</li>
+        </ul>
+        <button class="botao-plano btn-bronze" onclick="abrirModalPlano('bronze')">Escolher Plano &rarr;</button>
+      </div>
+
+      <div class="cartao prata popular">
+        <div class="faixa-popular">Mais Popular</div>
+        <div class="cabecalho-plano">
+          <span class="icone-prata"><i class="fa-solid fa-shield"></i></span>
+          <p class="titulo-plano">Pacote Prata</p>
+          <p class="preco-plano">R$99 <span>/por dia</span></p>
+        </div>
+        <p class="descricao-plano">A combinação perfeita de conforto, exclusividade e experiências únicas.</p>
+        <ul class="lista-beneficios">
+          <li><span class="icone-verde"><i class="fa-solid fa-check-double"></i></span> Todos os benefícios do Bronze</li>
+          <li><span class="icone-verde"><i class="fa-solid fa-check-double"></i></span> Upgrade de quarto (sujeito a disponibilidade)</li>
+          <li><span class="icone-verde"><i class="fa-solid fa-check-double"></i></span> Um passeio guiado particular</li>
+          <li><span class="icone-verde"><i class="fa-solid fa-check-double"></i></span> Reserva garantida nos melhores restaurantes</li>
+          <li><span class="icone-verde"><i class="fa-solid fa-check-double"></i></span> Check-in e check-out flexíveis</li>
+        </ul>
+        <button class="botao-plano btn-prata" onclick="abrirModalPlano('prata')">Escolher Plano &rarr;</button>
+      </div>
+
+      <div class="cartao ouro">
+        <div class="cabecalho-plano">
+          <span class="icone-ouro"><i class="fa-solid fa-crown"></i></span>
+          <p class="titulo-plano">Pacote Ouro</p>
+          <p class="preco-plano">R$199 <span>/por dia</span></p>
+        </div>
+        <p class="descricao-plano">A experiência definitiva em luxo, personalização e comodidade.</p>
+        <ul class="lista-beneficios">
+          <li><span class="icone-verde"><i class="fa-solid fa-check-double"></i></span> Todos os benefícios do Prata</li>
+          <li><span class="icone-verde"><i class="fa-solid fa-check-double"></i></span> Concierge pessoal 24/7</li>
+          <li><span class="icone-verde"><i class="fa-solid fa-check-double"></i></span> Transfer privativo de chegada e saída</li>
+          <li><span class="icone-verde"><i class="fa-solid fa-check-double"></i></span> Uma experiência exclusiva (ex: voo de balão, jantar com chef)</li>
+          <li><span class="icone-verde"><i class="fa-solid fa-check-double"></i></span> Roteiro 100% flexível e ajustável na hora</li>
+        </ul>
+        <button class="botao-plano btn-ouro" onclick="abrirModalPlano('ouro')">Escolher Plano &rarr;</button>
+      </div>
+    </div>
+  </main>
+
+  <div id="modal-plano" class="modal-plano">
+    <div class="modal-conteudo-plano">
+      <span class="fechar-modal" onclick="fecharModalPlano()">&times;</span>
+
+      <div class="modal-grid-layout">
+        <span id="icone-modal-plano" class="icone-plano-modal"></span> 
+        <h2 id="titulo-modal-plano" class="modal-titulo">Escolher Plano</h2>
+
+        <div class="modal-info">
+          <p class="modal-paragrafo">
+            Parabéns pela sua escolha! Para ativar o seu <b id="nome-plano-modal">Plano Escolhido</b> e
+            começar a desfrutar de todos os benefícios premium, siga os passos abaixo:
+          </p>
+
+          <ul id="lista-passos-modal" class="modal-lista">
+            </ul>
+
+          <button class="modal-botao">Confirmar Escolha e Iniciar Reserva</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="rodape-principal">
+    <div class="container-rodape">
+      <div class="rodape-coluna rodape-info">
+        <div class="header-logo logo-rodape">
+          <img src="../assets/img/logo.png" alt="BrasilTour Logo" id="logo-img-rodape">
+          <div class="logo-texto">
+            <span class="logo-titulo">BrasilTour</span>
+            <small class="logo-subtitulo">Explore o Brasil com quem conhece</small>
+          </div>
+        </div>
+        <p class="rodape-descricao">
+          Criamos roteiros personalizados que conectam você às belezas naturais, cultura rica e experiências únicas que o Brasil tem a oferecer.
+        </p>
+      </div>
+
+      <div class="rodape-coluna rodape-links list escolhas">
+                <h5 class="rodape-titulo-coluna">Aventuras</h5>
+                <a href="../paginas/passeios-lazer.html" class="link-rodape">Passeios & Lazer</a>
+                <a href="../paginas/aguas-calmaria.html" class="link-rodape">Águas & Calmaria</a>
+                <a href="../paginas/turismo-historico.html" class="link-rodape">Turismo Histórico</a>
+                <a href="../paginas/roteiros-personalizados.html" class="link-rodape">Roteiro Personalizado</a>
+            </div>
+
+            <div class="rodape-coluna rodape-links list escolhas">
+                <h5 class="rodape-titulo-coluna">Contato</h5>
+                <a href="../paginas/contato2.html" class="link-rodape">Fale Conosco</a>
+                <a href="../paginas/promocoes.html" class="link-rodape">Promoções</a>
+                <span class="info-rodape-contato">contato@brasiltour.com</span>
+                <span class="info-rodape-contato">(11) 9999-9999</span>
+            </div>
+
+        </div>
+
+    <footer class="rodape-direitos">
+      <p>&copy; 2025 BrasilTour. Todos os direitos reservados.</p>
+    </footer>
+  </footer>
+  
+</body>
+</html>

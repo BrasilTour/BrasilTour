@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Passeios e Lazer - BrasilTour</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/passeios-lazer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <style>
+        /* Estilos do formulário para coexistir com o CSS Puro */
+        .card-tailwind { /* Usado apenas no bloco do formulário para dar o estilo de sombra/borda */
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+            border: 1px solid #e5e7eb;
+        }
+        .input-style { /* Estilo dos inputs */
+            padding: 0.75rem 1rem; border: 1px solid #d1d5db; border-radius: 0.375rem;
+            width: 100%; transition: border-color 0.15s ease-in-out;
+        }
+        .input-style:focus {
+            border-color: #1e40af; box-shadow: 0 0 0 1px #1e40af; outline: none;
+        }
+        .gradient-button { /* Estilo do botão */
+            background-image: linear-gradient(to right, #1e40af, #10b981);
+            transition: opacity 0.2s ease-in-out;
+        }
+        .gradient-button:hover { opacity: 0.9; }
+    </style>
+</head>
+<body class="corpo-pagina">
+
+<header class="header-principal">
+        <div class="header-logo">
+           <img  id="logo-img" src="../assets/img/logo.png" alt="BrasilTour Logo" >
+            <div class="logo-texto">
+                <span class="header-titulo">BrasilTour</span>
+                <small class="logo-subtitulo">Explore o Brasil!</small>
+            </div>
+        </div>
+
+        <nav class="nav-principal">
+            <ul class="lista-nav">
+                <li class="item-nav"><a href="../home.html" class="link-nav"><i class="fas fa-home icone-nav"></i> Home</a></li>
+                
+                <li class="item-nav dropdown-menu">
+                    <a href="#" class="link-nav dropdown-toggle"><i class="fas fa-mountain"></i> Aventuras </i></a>
+                    <div class="dropdown-conteudo">
+                        <a href="../paginas/passeios-lazer.html" class="link-dropdown"><i class="fas fa-map-marker-alt icone-dropdown"></i> Passeios & Lazer</a>
+                        <a href="../paginas/aguas-calmaria.html" class="link-dropdown"><i class="fas fa-water icone-dropdown"></i> Águas & Calmaria</a>
+                        <a href="../paginas/turismo-historico.html" class="link-dropdown"><i class="fas fa-building icone-dropdown"></i> Turismo Histórico</a>
+                        <a href="../paginas/roteiros-personalizados.html" class="link-dropdown"><i class="fas fa-star icone-dropdown"></i> Roteiro Personalizado</a>
+                    </div>
+                </li>
+                
+                <li class="item-nav dropdown-menu">
+                    <a href="#" class="link-nav dropdown-toggle"><i class="fas fa-tags iconte-seta"></i> Ofertas</a>
+                    <div class="dropdown-conteudo">
+                        <a href="../paginas/promocoes.html" class="link-dropdown"><i class="fas fa-percentage icone-dropdown"></i> Promoções</a>
+                        <a href="../paginas/contato2.html" class="link-dropdown"><i class="fas fa-envelope icone-dropdown"></i> Contato</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="bloco-usuario">
+            <span class="texto-ola">Olá, Brasil</span>
+           <a href="../paginas/cadastro.html">  <button class="btn-sair"><i class="fas fa-sign-out-alt icone-btn"></i> Sair</button></a>
+        </div>
+    </header>
+
+<main class="Part-Principal">
+        
+        <section class="secao-hero box-aqui">
+            <h1 class="titulo-pagina">Passeios & Lazer Urbano</h1>
+            <p class="Paragrafo descricao-hero">
+                A face mais vibrante das cidades. De parques de diversões e festivais a restaurantes
+                e ruas de artesanato, a diversão está garantida.
+            </p>
+        </section>
+        
+        <section class="secao-conteudo">
+            
+            <div class="Part-A esquerda-inspiracao">
+                <div class="box-aqui card inspira-box-1">
+                    <h4 class="padrao-letra"><i class="fas fa-camera cam"></i> Inspire-se</h4>
+                    
+                    <div class="div-separa item-inspira card-hover-efeito">
+                        <img src="../assets/img/beto-carrero.jpg" alt="Beto Carrero" class="img-card-efeito">
+                        <div class="texto-card-efeito">
+                            <p class="Paragrafo label-img">Parque Temático (SC)</p>
+                        </div>
+                    </div>
+                    
+                    <div class="div-separa item-inspira card-hover-efeito">
+                        <img src="../assets/img/jardim-botanico.jpg" alt="Jardim Botânico" class="img-card-efeito">
+                        <div class="texto-card-efeito">
+                            <p class="Paragrafo label-img">Jardim Botânico (PR)</p>
+                        </div>
+                    </div>
+
+                    <div class="div-separa item-inspira card-hover-efeito">
+                        <img src="../assets/img/hot-park.jpg" alt="Hot Park" class="img-card-efeito">
+                        <div class="texto-card-efeito">
+                            <p class="Paragrafo label-img">Parque Aquático (GO)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="Part-B centro-conteudo">
+                
+                <div class="box-aqui card">
+                    <h3 class="Paragrafo titulo-card">Por que escolher Passeios & Lazer?</h3>
+                    <p class="Paragrafo texto-explicacao">
+                        A cidade pulsa com vida e diversão! Escolher um roteiro de lazer urbano significa mergulhar em um mundo de entretenimento,
+                        gastronomia e cultura pop. É a oportunidade perfeita para criar memórias divertidas, descobrir novos sabores e sentir a
+                        energia contagiante dos centros urbanos.
+                    </p>
+                </div>
+
+                <div class="card-tailwind w-full bg-white rounded-xl p-6 md:p-8">
+                    
+                    <header class="flex items-center text-blue-900 mb-6">
+                        <h2 class="text-xl md:text-2xl font-bold"> <i class="fa-solid fa-wand-magic-sparkles"></i> Monte seu Roteiro Mágico</h2>
+                    </header>
+
+                    <form id="itinerary-form" class="space-y-6">
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <label for="origin-city" class="block text-sm font-medium text-gray-700 mb-1">Sua cidade de origem</label>
+                                <input type="text" id="origin-city" placeholder="Ex: São Paulo, SP" required class="input-style">
+                            </div>
+                            <div>
+                                <label for="destination" class="block text-sm font-medium text-gray-700 mb-1">Destino ou tipo de lugar</label>
+                                <input type="text" id="destination" placeholder="Ex: Locais com passeios & lazer" required class="input-style">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-3 gap-4">
+                            <div>
+                                <label for="duration" class="block text-sm font-medium text-gray-700 mb-1">Duração (dias)</label>
+                                <input type="number" id="duration" value="5" min="1" required class="input-style">
+                            </div>
+                            <div>
+                                <label for="budget" class="block text-sm font-medium text-gray-700 mb-1">Orçamento</label>
+                                <select id="budget" required class="input-style bg-white appearance-none">
+                                    <option value="moderado" selected>Moderado</option>
+                                    <option value="economico">Econômico</option>
+                                    <option value="premium">Premium</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="travelers" class="block text-sm font-medium text-gray-700 mb-1">Nº de viajantes</label>
+                                <input type="number" id="travelers" value="2" min="1" required class="input-style">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="preferences" class="block text-sm font-medium text-gray-700 mb-1">Preferências ou pedidos especiais</label>
+                            <textarea id="preferences" rows="3" placeholder="Ex: Gostaria de opções vegetarianas, prefiro lugares com pouca gente, etc." class="input-style resize-none"></textarea>
+                        </div>
+
+                        <button type="submit" id="generate-button" class="gradient-button text-white font-semibold py-3 rounded-md w-full flex items-center justify-center space-x-2 shadow-lg">
+                            <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+                            </svg>
+                            <span id="button-text">Gerar Roteiro Personalizado</span>
+                        </button>
+
+                        <div id="loading-spinner" class="hidden text-center mt-4">
+                            <div class="inline-block h-6 w-6 animate-spin rounded-full border-4 border-solid border-current border-r-transparent align-[-0.125em] text-blue-900" role="status">
+                                <span class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]">Loading...</span>
+                            </div>
+                            <p class="text-gray-600 mt-2">Aguarde, a IA está montando seu roteiro mágico...</p>
+                        </div>
+                        
+                        <div id="itinerary-result" class="hidden mt-8 p-4 bg-yellow-50 border-l-4 border-yellow-500 text-yellow-800 rounded-md" role="alert">
+                            <p class="font-bold mb-1">Seu Roteiro Mágico está pronto!</p>
+                            <p>A simulação de API foi concluída. Um roteiro detalhado seria exibido aqui.</p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="Part-C direita-inspiracao">
+                <div class="box-aqui card inspira-box-2">
+                    <h4 class="padrao-letra"><i class="fas fa-camera cam"></i> Inspire-se</h4>
+                    
+                    <div class="div-separa item-inspira card-hover-efeito">
+                        <img src="../assets/img/oscar-niemeyer.jpg" alt="Oscar Niemeyer" class="img-inspira img-card-efeito">
+                        <div class="texto-card-efeito">
+                            <p class="Paragrafo label-img">Arquitetura (PR)</p>
+                        </div>
+                    </div>
+
+                    <div class="div-separa item-inspira card-hover-efeito">
+                        <img src="../assets/img/teatro-sp.jpg" alt="Teatro SP" class="img-inspira img-card-efeito">
+                        <div class="texto-card-efeito">
+                            <p class="Paragrafo label-img">Espetáculos (SP)</p>
+                        </div>
+                    </div>
+
+                    <div class="div-separa item-inspira card-hover-efeito">
+                        <img src="../assets/img/gruta.jpg" alt="Gruta" class="img-inspira img-card-efeito">
+                        <div class="texto-card-efeito">
+                            <p class="Paragrafo label-img">Natureza & Mistério (MS)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        
+    </main>
+
+    <footer class="rodape-principal">
+        <div class="container-rodape">
+            
+            <div class="rodape-coluna rodape-info">
+                <div class="header-logo logo-rodape">
+                    <img src="../assets/img/logo.png" alt="BrasilTour Logo" id="logo-img-rodape">
+                    <div class="logo-texto">
+                        <span class="logo-titulo">BrasilTour</span>
+                        <small class="logo-subtitulo">Explore o Brasil com quem conhece</small>
+                    </div>
+                </div>
+                <p class="rodape-descricao">
+                    Criamos roteiros personalizados que conectam você às belezas
+                    naturais, cultura rica e experiências únicas que o Brasil tem a
+                    oferecer.
+                </p>
+            </div>
+
+            <div class="rodape-coluna rodape-links list escolhas">
+                <h5 class="rodape-titulo-coluna">Aventuras</h5>
+                <a href="../paginas/passeios-lazer.html" class="link-rodape">Passeios & Lazer</a>
+                <a href="../paginas/aguas-calmaria.html" class="link-rodape">Águas & Calmaria</a>
+                <a href="../paginas/turismo-historico.html" class="link-rodape">Turismo Histórico</a>
+                <a href="../paginas/roteiros-personalizados.html" class="link-rodape">Roteiro Personalizado</a>
+            </div>
+
+            <div class="rodape-coluna rodape-links list escolhas">
+                <h5 class="rodape-titulo-coluna">Contato</h5>
+                <a href="../paginas/contato2.html" class="link-rodape">Fale Conosco</a>
+                <a href="../paginas/promocoes.html" class="link-rodape">Promoções</a>
+                <span class="info-rodape-contato">contato@brasiltour.com</span>
+                <span class="info-rodape-contato">(11) 9999-9999</span>
+            </div>
+
+        </div>
+
+    <footer class="rodape-direitos">
+        <p>&copy; 2025 BrasilTour. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

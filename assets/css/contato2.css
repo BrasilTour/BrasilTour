@@ -1,0 +1,251 @@
+/* Importação de fontes, se necessário (ex: Google Fonts) */
+@import url('home.css');
+
+/* ================================================================ */
+/* 0. RESET E CONFIGURAÇÃO GERAL */
+/* ================================================================ */
+
+* {
+    /* Garante que padding e border não aumentem o tamanho total do elemento */
+    box-sizing: border-box; 
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #f8f8f8; /* Fundo cinza bem claro para o corpo da página */
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+
+
+/* ---------------------------------------------------------------- */
+/* Configuração de formatação da div */
+/* ---------------------------------------------------------------- */
+
+#pagina-contato{
+    padding: 20px;
+    margin-top: 100px;
+}
+
+/* ---------------------------------------------------------------- */
+/* 1. SEÇÃO TOPO (FALE CONOSCO) */
+/* ---------------------------------------------------------------- */
+
+.secao-topo {
+    /* Usa Flexbox para organizar e centralizar o texto verticalmente */
+    display: flex; 
+    flex-direction: column; /* Empilha os itens (h1 e p) */
+    align-items: center; /* Centraliza horizontalmente */
+    text-align: center;
+    padding: 60px 20px 40px; /* Espaçamento superior e inferior */
+}
+
+.titulo-principal {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.descricao {
+    font-size: 1.1em;
+    color: #666;
+    max-width: 500px; /* Limita a largura do texto de descrição */
+    line-height: 1.5;
+    white-space: nowrap;
+}
+
+/* ---------------------------------------------------------------- */
+/* 2. GRID PRINCIPAL (Onde ocorre a divisão em 2 colunas) */
+/* ---------------------------------------------------------------- */
+
+#grid-principal {
+    /* Define o container como um Grid */
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr; /* Ex: 40% e 60% da área disponível */
+    gap: 20%; /* Espaço entre as colunas */
+    max-width: 1000px; /* Largura máxima do conteúdo */
+    margin: 0 auto; /* Centraliza o grid na página */
+    padding: 0 20px 60px; /* Padding para evitar que encoste nas bordas */
+}
+
+/* ---------------------------------------------------------------- */
+/* 3. INFORMAÇÕES DE CONTATO (Coluna da Esquerda) */
+/* ---------------------------------------------------------------- */
+
+.info-contato-container h2 {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+/* Estilo para cada bloco de informação (Email, Telefone, Endereço) */
+.item-contato-flex {
+    /* Usa Flexbox para alinhar o círculo com o texto ao lado */
+    display: flex; 
+    align-items: flex-start; /* Alinha o conteúdo ao topo (início) */
+    margin-bottom: 30px;
+}
+
+/* Estilo do círculo de fundo dos ícones */
+.icone-circulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; /* Transforma a div em um círculo */
+    margin-right: 15px;
+    /* A cor azul clara na imagem é simulada aqui */
+    background-color: #e6f0ff; 
+}
+
+/* Estilo para os ícones (emojis) dentro do círculo */
+.icone-contato {
+    font-size: 1.4em;
+    color: #007bff; /* Azul para o ícone */
+}
+
+/* Título da informação (ex: Email, Telefone) */
+.titulo-item {
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 2px;
+}
+
+/* Detalhe da informação (ex: endereço, número) */
+.detalhe-item {
+    color: #555;
+}
+
+/* ---------------------------------------------------------------- */
+/* 4. FORMULÁRIO (Coluna da Direita) */
+/* ---------------------------------------------------------------- */
+
+.form-contato-container {
+    background-color: white;
+    padding: 40px;
+    border-radius: 8px; /* Cantos arredondados do container do form */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Sombra suave para destacar */
+}
+
+.form-contato-container h2 {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+/* Container do formulário */
+.formulario-flex {
+    /* Usa Flexbox para empilhar todos os campos verticalmente */
+    display: flex; 
+    flex-direction: column;
+    gap: 15px; /* Espaçamento uniforme entre os campos */
+}
+
+/* Estilo comum para campos de texto, email, telefone e select */
+.formulario-flex input,
+.formulario-flex select,
+.formulario-flex textarea {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 100%; /* Ocupa toda a largura do container */
+    font-size: 1em;
+    color: #333;
+    transition: border-color 0.3s;
+}
+
+/* Foco nos campos (borda azul clara ao clicar) */
+.formulario-flex input:focus,
+.formulario-flex select:focus,
+.formulario-flex textarea:focus {
+    border-color: #007bff;
+    outline: none; /* Remove o contorno padrão do navegador */
+}
+
+.formulario-flex textarea {
+    resize: vertical; /* Permite redimensionar apenas na vertical */
+    min-height: 120px;
+}
+
+/* Botão "Publicar" (conforme a imagem: azul e no canto superior direito) */
+.botao-publicar {
+    /* O botão é posicionado fora do formulário principal, conforme a imagem: 
+       é preciso colocá-lo no header, mas se for mantido no form: */
+    background-color: #007bff;
+    color: white;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    align-self: flex-end; /* Alinha o botão para a direita dentro do Flex Container */
+    margin-top: 10px;
+    width: auto; /* Deixa o botão com largura automática (não 100%) */
+    transition: background-color 0.3s;
+}
+
+.botao-publicar:hover {
+    background-color: #0056b3;
+}
+
+/* ---------------------------------------------------------------- */
+/* 5. RESPONSIVIDADE (Ajuste para telas menores - Mobile First) */
+/* ---------------------------------------------------------------- */
+
+@media (max-width: 768px) {
+    #grid-principal {
+        /* Em telas pequenas, o Grid passa a ter apenas 1 coluna */
+        grid-template-columns: 1fr; 
+        gap: 30px; /* Reduz o espaçamento entre as seções */
+        margin: 0 auto; /* Garante centralização */
+        padding: 0 15px 40px;
+    }
+    
+    .secao-topo {
+        padding: 40px 15px 30px;
+    }
+
+    .form-contato-container {
+        padding: 30px;
+    }
+}
+
+/* NOVO ESTILO DO BOTÃO DE ENVIO - Preto, com ícone e largura total */
+.botao-enviar-final {
+    /* Usa Flexbox para centralizar o texto e o ícone */
+    display: flex; 
+    justify-content: center; /* Centraliza horizontalmente o conteúdo */
+    align-items: center; /* Centraliza verticalmente o conteúdo */
+    
+    background-color: #222; /* Cor preta/cinza escuro da imagem */
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 9px; /* Ajuste para ser ligeiramente mais arredondado */
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: 500;
+    margin-top: 20px;
+    width: 100%; /* Ocupa a largura total */
+    transition: background-color 0.3s;
+}
+
+.botao-enviar-final:hover {
+    background-color: #000; /* Preto total no hover */
+}
+
+.icone-aviao {
+    /* Estilo para o ícone do avião/seta de envio */
+    font-size: 1.1em;
+    margin-right: 10px;
+    /* Rotação para simular o ícone de avião/envio */
+    transform: rotate(45deg); 
+    display: inline-block; /* Necessário para aplicar a rotação */
+}
