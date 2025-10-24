@@ -626,4 +626,4 @@ addAnimationStyles();
 // Adiciona os estilos
 addAnimationStyles();
 
-console.log('✈️ Script Passeios & Lazer carregado com sucesso!');
+console.log('✈️ Script aventura completo!');
